@@ -1,5 +1,9 @@
 import express from 'express';
-import 'dotenv/config';
+// import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config({
+    // path:"./.env"
+})
 console.log("hello world")
 const app=express();
 app.get("/",(req,res)=>{
