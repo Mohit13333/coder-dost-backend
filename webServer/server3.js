@@ -7,7 +7,7 @@ const data = JSON.parse(fs.readFileSync("data.json", "utf8"));
 const products = data.products;
 const server = http.createServer((req, res) => {
   console.log(req.url,req.method);
-  if(req.url.startsWith('/products')){
+  if(req.url.startsWith('/product')){
     const id = req.url.split('/')[2]
     const product = products.find(p=>p.id===(+id))
     console.log(product)
