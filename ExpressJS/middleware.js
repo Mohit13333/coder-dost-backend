@@ -10,9 +10,9 @@ const products = data.products;
 // bodyparser
 app.use(express.json());
 // app.use(express.urlencoded);
-app.use(morgan("default"));
+// app.use(morgan("default"));
 app.use(express.static("public"));
-app.use(morgan);
+// app.use(morgan);
 
 // application level middleware
 app.use((req, res, next) => {
@@ -36,14 +36,16 @@ app.use((req, res, next) => {
 // };
 // app.use(auth);
 const auth = (req, res, next) => {
-  console.log(req.body);
-  if (req.body.password == "123") {
-    next();
-  } else {
-    res.status(401).send("Something went wrong");
-  }
+//   console.log(req.body);
+//   if (req.body.password == "123") {
+//     next();
+//   } else {
+//     res.status(401).send("Something went wrong");
+//   }
+next();
 };
-app.get("/", auth, function (req, res) {
+app.get("/product/:id", function (req, res) {
+    console.log(req.params);
   res.send(products);
 });
 
