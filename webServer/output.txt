@@ -1,0 +1,19 @@
+ Volume in drive C is OS
+ Volume Serial Number is 1A9A-3C35
+
+ Directory of C:\mohit singh\coder dost backend\webServer
+
+24-09-2024  00:05    <DIR>          .
+21-09-2024  22:31    <DIR>          ..
+21-09-2024  22:45                14 .gitignore
+23-09-2024  23:28            21,582 data.json
+23-09-2024  23:29             5,182 index.html
+21-09-2024  22:46    <DIR>          node_modules
+21-09-2024  23:27            11,730 package-lock.json
+22-09-2024  13:19               325 package.json
+21-09-2024  23:26               361 server.js
+21-09-2024  23:44               465 server2.js
+23-09-2024  23:48             1,875 server3.js
+24-09-2024  00:12               989 set.js
+               9 File(s)         42,523 bytes
+               3 Dir(s)  265,669,201,920 bytes free
