@@ -1,15 +1,18 @@
 import express from "express";
 import morgan from "morgan";
 import Routes from "./Routes/Routes.js"
+import Main from "./db/db.js"
+import cors from "cors";
 // import fs from "fs";
 // const productRouter=express.Router();
 
 const app = express();
-
+// Main();
 // const data = JSON.parse(fs.readFileSync("data.json", "utf8"));
 // const products = data.products;
 
 // bodyparser
+app.use(cors);
 app.use(express.json());
 app.use(morgan('default'));
 app.use("/api",Routes)
