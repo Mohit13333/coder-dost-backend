@@ -1,9 +1,4 @@
 import Product from "../model/product.model.js";
-// import mongoose from "mongoose";
-// import fs from "fs";
-// // const index = fs.readFileSync('index.html', 'utf-8');
-// const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
-// const products = data.products;
 
 const createProduct =
 async (req, res) => {
