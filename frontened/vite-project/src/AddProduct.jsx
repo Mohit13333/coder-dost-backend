@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-axios.defaults.baseUrl = "http://localhost:8000";
+axios.defaults.baseUrl = "";
 axios.defaults.headers.common['Authorization'] = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbW9AZ21haWwuY29tIiwiaWF0IjoxNjc2NDkzNTI4fQ.VNWQDQJM9jDXrGofVLk3brpqlcNwFzjDmLLwfP9Rw4TM20IIuayvzubPJPfrkJb4kcRAUchdg7uy36rf9z-n9eLdcCw6FQLBBP7t0IA0NhFwjc0NjsJ50zUFgqPi8TAeVclD3DpjEoIRGbSrJpeVIBnLy6DeY7NcugJRbzKpW7iVq9WR9hO-mJ9n01zzEs3xJZ9Kyvq0dir680qPAtEdqLIvPstK8tDRNoYwcZXUthxSoDEAf-sp-E1qbuVv1WDlNpmBncWcUKFUgxeAuoFKRaYOy-9xrATE33C3wUW26Q9nUWJjDHiDw_Oe695P1UpTsKntGAWI_ECytTZhlA_pug";
 
 const AddProduct = () => {
@@ -20,8 +20,9 @@ const AddProduct = () => {
   }
 
   const addProduct = async(product)=>{
-    const res = await axios.post('/products',product);
+    const res = await axios.post('/api/products',product);
     console.log(res.data);
+    setProduct(res.data)
 }
 
 
@@ -33,7 +34,7 @@ const AddProduct = () => {
         {/* Text input*/}
         <div className="form-group">
           <label className="col-md-4 control-label" htmlFor="title">
-            Title
+            title
           </label>
           <div className="col-md-4">
             <input
@@ -48,7 +49,7 @@ const AddProduct = () => {
         </div>
         <div className="form-group">
           <label className="col-md-4 control-label" htmlFor="thumbnail">
-            Thumbnail
+            thumbnail
           </label>
           <div className="col-md-4">
             <input
@@ -63,7 +64,7 @@ const AddProduct = () => {
         </div>
         <div className="form-group">
           <label className="col-md-4 control-label" htmlFor="price">
-            Price
+            price
           </label>
           <div className="col-md-4">
             <input
@@ -79,7 +80,7 @@ const AddProduct = () => {
         {/* Select Basic */}
         <div className="form-group">
           <label className="col-md-4 control-label" htmlFor="category">
-            Category
+            category
           </label>
           <div className="col-md-4">
             <select
@@ -97,7 +98,7 @@ const AddProduct = () => {
         {/* Select Basic */}
         <div className="form-group">
           <label className="col-md-4 control-label" htmlFor="brand">
-            Brand
+            brand
           </label>
           <div className="col-md-4">
             <select
@@ -126,7 +127,7 @@ const AddProduct = () => {
               className="form-control input-md"
               onChange={handleChange}
             />
-            <span className="help-block">help</span>
+            <span className="rounded-md bg-slate-900 p-2 text-white ml-1">help</span>
           </div>
         </div>
         {/* Button */}
@@ -135,7 +136,7 @@ const AddProduct = () => {
             <button
               id="singlebutton"
               name="singlebutton"
-              className="btn btn-primary"
+              className="rounded-md bg-slate-900 p-2 text-white mt-1"
               >
               Add
             </button>

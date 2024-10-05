@@ -9,7 +9,7 @@ const productSchema = new Schema(
     },
     description: {
       type: String,
-      required: true,
+      // required: true,
     },
     price: {
       type: Number,
@@ -20,10 +20,11 @@ const productSchema = new Schema(
       type: Number,
       min: [0, "wrong rating"],
       max: 5,
+      default:0
     },
     stock: {
       type: Number,
-      required: true,
+      // required: true,
     },
     brand: String,
     category: String,

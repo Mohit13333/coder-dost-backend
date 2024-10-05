@@ -1,18 +1,20 @@
 import './Product.css';
 
-const Product = ({_id,title,thumbnail,price,discountPercentage,rating, handleClick}) => {
-  return (  
+const Product = ({_id,title,thumbnail,price,discountPercentage,rating,handleClick}) => {
+
+
+  return (
     <>
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-md-3">
+      <div className="container mt-5 ">
+        <div className="row ">
+          <div className="col-md-3 ">
             <div className="card">
-              <div className="image-container">
+              <div className="image-container ">
                 <div className="first">
-                  <div className="d-flex justify-content-between align-items-center">
+                  <div className="flex justify-content-between align-items-center">
                     <span className="discount">-{discountPercentage}%</span>
                     <span className="wishlist">
-                      <i className="fa fa-heart-o" onClick={()=>handleClick(_id)}/>
+                      <p className="flex justify-center items-center" onClick={()=>handleClick(_id)}>&#9829;</p>
                     </span>
                   </div>
                 </div>
@@ -27,10 +29,10 @@ const Product = ({_id,title,thumbnail,price,discountPercentage,rating, handleCli
                   <h5 className="dress-name">{title}</h5>
                   <div className="d-flex flex-column mb-2">
                     <span className="new-price">$ {Math.round(price-discountPercentage*price/100)}</span>
-                    <small className="old-price text-right">$ {price}</small>
+                    <small className="old-price flex text-right">$ {price}</small>
                   </div>
                 </div>
-                <div className="d-flex justify-content-between align-items-center pt-1">
+                <div className="flex justify-between items-center pt-1">
                   <div>
                     <i className="fa fa-star-o rating-star" />
                     <span className="rating-number">{rating}</span>

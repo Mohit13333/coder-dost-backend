@@ -6,7 +6,7 @@ import {
     getProduct,
     replaceProduct,
     updateProduct,
-  } from "../controllers/products.js";
+  } from "../controllers/Products.js";
   const Routes=express.Router();
 
 
