@@ -52,6 +52,23 @@ const AddProduct = () => {
             />
           </div>
         </div>
+        <div className=" mt-[18px] mb-3">
+          <div className="mb-3">
+          <label className="mt-3" htmlFor="description">
+            <span className="bg-black rounded-lg text-white p-[9px] mt-4">Description</span>
+          </label>
+          </div>
+          <div className="mb-3">
+            <input
+              id="description"
+              name="description"
+              type="text"
+              placeholder="description"
+              className=" bg-slate-600 text-white p-2 rounded-lg"
+              onChange={handleChange}
+            />
+          </div>
+        </div>
         <div className=" mb-3">
         <div className="mb-3">
           <label className="mb-3" htmlFor="thumbnail">

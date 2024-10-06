@@ -1,6 +1,6 @@
 import './Product.css';
 
-const Product = ({_id,title,thumbnail,price,discountPercentage,rating,handleClick,brand,category}) => {
+const Product = ({_id,title,thumbnail,price,discountPercentage,rating,handleClick,brand,category,description}) => {
 
 
   return (
@@ -27,6 +27,7 @@ const Product = ({_id,title,thumbnail,price,discountPercentage,rating,handleClic
               <div className="product-detail-container p-2">
                 <div className="d-flex justify-content-between align-items-center">
                   <h5 className="dress-name">{title}</h5>
+                  <p className="text-sm text-pretty text-gray-600">{description}</p>
                   <div className="d-flex flex-column mb-2">
                     <span className="new-price">$ {Math.round(price-discountPercentage*price/100)}</span>
                     <small className="old-price flex text-right">$ {price}</small>
