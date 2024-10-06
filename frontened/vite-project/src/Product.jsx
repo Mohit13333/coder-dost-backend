@@ -1,6 +1,6 @@
 import './Product.css';
 
-const Product = ({_id,title,thumbnail,price,discountPercentage,rating,handleClick}) => {
+const Product = ({_id,title,thumbnail,price,discountPercentage,rating,handleClick,brand,category}) => {
 
 
   return (
@@ -32,10 +32,19 @@ const Product = ({_id,title,thumbnail,price,discountPercentage,rating,handleClic
                     <small className="old-price flex text-right">$ {price}</small>
                   </div>
                 </div>
+                <div className='flex justify-between'>
+                  <div>
+                  <p className='text-black text-xl'>Category</p>
+                <span className="brand text-gray-500 text-sm"> {category}</span>
+                </div>
+                <div>
+                  <p className='text-black text-xl'>Brand</p>
+                <span className="brand text-gray-500 text-sm"> {brand}</span>
+                </div>
+                </div>
                 <div className="flex justify-between items-center pt-1">
                   <div>
-                    <i className="fa fa-star-o rating-star" />
-                    <span className="rating-number">{rating}</span>
+                    <span className="rating-number"><span className="text-red-700">&#9733;</span>{rating}</span>
                   </div>
                   <span className="buy">BUY +</span>
                 </div>

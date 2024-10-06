@@ -31,12 +31,14 @@ const ProductList = () => {
     setProducts(res.data);
   };
   const handleSort = async (e) => {
-    const [field, order] = e.target.value.split(':');
-    try {
-      const res = await axios.get(`/api/products?sort=${field}&order=${order}`);
+    const field = e.target.value.split('_');
+    console.log(e.target.value);
+    if (field.length == 2) {  // Ensure it splits into 2 parts
+      const res = await axios.get(`/api/products?sort=${field[0]}&order=${field[1]}`);
+      console.log(res.data);
       setProducts(res.data);
-    } catch (error) {
-      console.error("Error sorting products:", error);
+    } else {
+      console.error("Sort field and order are not properly formatted.");
     }
 
   };
@@ -48,10 +50,10 @@ const ProductList = () => {
   return (
     <>
      {/* <select onChange={handleSort}>
-      <option value="price:desc">Price High to Low</option>
-      <option value="price:asc">Price Low to High</option>
-      <option value="rating:desc">Rating High to Low</option>
-      <option value="rating:asc">Rating Low to High</option>
+      <option value="price_desc">Price High to Low</option>
+      <option value="price_asc">Price Low to High</option>
+      <option value="rating_desc">Rating High to Low</option>
+      <option value="rating_asc">Rating Low to High</option>
 
 
      </select> */}
@@ -65,8 +67,8 @@ const ProductList = () => {
       {products.map((product, index) => (
         <Product {...product} key={index} handleClick={handleClick}></Product>
       ))}
-       {/* Pagination buttons (for illustration purposes) */}
-       {/* <div>
+       {/* Pagination buttons (for illustration purposes)
+       <div>
         <button onClick={() => handlePage(1)}>Page 1</button>
         <button onClick={() => handlePage(2)}>Page 2</button>
       </div> */}
