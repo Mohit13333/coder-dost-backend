@@ -12,11 +12,11 @@
     "routes": [
       {
         "src": "api/products",
-        "dest": "index.js"
+        "dest": "Routes.js"
       },
       {
         "src": "api/products/(.*)",
-        "dest": "index.js"
+        "dest": "Routes.js"
       },
       {
         "src": "/add",
