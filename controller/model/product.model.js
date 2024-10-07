@@ -8,13 +8,13 @@ const productSchema = new Schema(
     },
     description: {
       type: String,
-      required: true,
+      // required: true,
     },
     price: {
       type: Number,
       required: true,
     },
-    discountPercentage: { type: Number, required: true },
+    discountPercentage: { type: Number },
     rating: {
       type: Number,
       min: [0, "wrong rating"],
@@ -23,7 +23,7 @@ const productSchema = new Schema(
     },
     stock: {
       type: Number,
-      required: true,
+      // required: true,
     },
     brand:{
       type: String,

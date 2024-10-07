@@ -14,7 +14,8 @@ const Product = ({_id,title,thumbnail,price,discountPercentage,rating,handleClic
                   <div className="flex justify-content-between align-items-center">
                     <span className="discount">-{discountPercentage}%</span>
                     <span className="wishlist">
-                      <p className="flex justify-center items-center" onClick={()=>handleClick(_id)}>&#9829;</p>
+                    <i className="flex justify-center items-center  text-black fa fa-trash" onClick={()=>handleClick(_id)}></i>
+                      {/* <p className="flex justify-center items-center" onClick={()=>handleClick(_id)}>&#9829;</p> */}
                     </span>
                   </div>
                 </div>
