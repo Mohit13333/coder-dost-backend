@@ -4,8 +4,8 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import Routes1 from './Routes/Routes.js';
-import Routes from './Routes/auth.js'
+import Routes from './Routes/Routes.js';
+// import Routes from './Routes/auth.js'
 import Main from "./db/db.js"
 import fs from "fs";
 // Main();
@@ -26,11 +26,11 @@ app.use(morgan('default'));
 app.use(express.static(path.join(_dirname, process.env.PUBLIC_DIR)));
 
 // API routes
-app.use('/api', Routes1);
+app.use('/api', Routes);
 
 // createuser
 
-app.use('/auth',Routes);
+// app.use('/auth',Routes);
 
 // Serve index.html
 app.use((req, res) => {
