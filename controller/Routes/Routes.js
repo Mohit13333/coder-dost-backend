@@ -14,7 +14,7 @@ import {
 //   updateUser,
 //   deleteUser,
 // } from "../controllers/user.js";
-import auth from "../jwt/jwt.js";
+// import auth from "../jwt/jwt.js";
 // import { createUser } from "../controllers/auth.js";
 const Routes = express.Router();
 
