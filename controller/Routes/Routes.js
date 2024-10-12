@@ -7,14 +7,14 @@ import {
   replaceProduct,
   updateProduct,
 } from "../controllers/Products.js";
-import {
-  getAllUsers,
-  getUser,
-  replaceUser,
-  updateUser,
-  deleteUser,
-} from "../controllers/user.js";
-import auth from "../jwt/jwt.js";
+// import {
+//   getAllUsers,
+//   getUser,
+//   replaceUser,
+//   updateUser,
+//   deleteUser,
+// } from "../controllers/user.js";
+// import auth from "../jwt/jwt.js";
 // import { createUser } from "../controllers/auth.js";
 const Routes = express.Router();
 
