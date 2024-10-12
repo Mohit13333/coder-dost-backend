@@ -1,39 +1,39 @@
-import User from "../model/user.model.js";
+// import User from "../model/user.model.js";
 
-// Get All Users
-const getAllUsers = async (req, res) => {
-  const users = await User.find();
-  console.log(users);
-  res.json(users);
-};
+// // Get All Users
+// const getAllUsers = async (req, res) => {
+//   const users = await User.find();
+//   console.log(users);
+//   res.json(users);
+// };
 
-const getUser = async (req, res) => {
-  const id = req.params.id;
-  const user = await User.findById(id); // Ensure you are returning only the document
-  res.status(200).json(user);
-};
-const replaceUser = async (req, res) => {
-  const id = req.params.id;
-  const doc = await User.findOneAndReplace({ _id: id }, req.body, {
-    new: true,
-  }); // it _id:id written because it is find one
-  res.status(201).json(doc);
-};
-const updateUser = async (req, res) => {
-  const id = req.params.id;
-  const doc = await User.findByIdAndUpdate(id, req.body);
-  res.status(201).json(doc);
-};
-const deleteUser = async (req, res) => {
-  const id = req.params.id;
-  const doc = await User.findByIdAndDelete(id);
-  res.status(201).json(doc);
-};
+// const getUser = async (req, res) => {
+//   const id = req.params.id;
+//   const user = await User.findById(id); // Ensure you are returning only the document
+//   res.status(200).json(user);
+// };
+// const replaceUser = async (req, res) => {
+//   const id = req.params.id;
+//   const doc = await User.findOneAndReplace({ _id: id }, req.body, {
+//     new: true,
+//   }); // it _id:id written because it is find one
+//   res.status(201).json(doc);
+// };
+// const updateUser = async (req, res) => {
+//   const id = req.params.id;
+//   const doc = await User.findByIdAndUpdate(id, req.body);
+//   res.status(201).json(doc);
+// };
+// const deleteUser = async (req, res) => {
+//   const id = req.params.id;
+//   const doc = await User.findByIdAndDelete(id);
+//   res.status(201).json(doc);
+// };
 
-export {
-  getAllUsers,
-  getUser,
-  replaceUser,
-  updateUser,
-  deleteUser,
-};
+// export {
+//   getAllUsers,
+//   getUser,
+//   replaceUser,
+//   updateUser,
+//   deleteUser,
+// };
