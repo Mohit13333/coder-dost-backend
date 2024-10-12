@@ -14,23 +14,23 @@ import {
 //   updateUser,
 //   deleteUser,
 // } from "../controllers/user.js";
-// import auth from "../jwt/jwt.js";
+import auth from "../jwt/jwt.js";
 // import { createUser } from "../controllers/auth.js";
 const Routes = express.Router();
 
-Routes.get("/users/", auth, getAllUsers);
+// Routes.get("/users/", auth, getAllUsers);
 
-// Read GET /users/:id
-Routes.get("/users/:id", auth, getUser);
+// // Read GET /users/:id
+// Routes.get("/users/:id", auth, getUser);
 
-// Update PUT /users/:id
-Routes.put("/users/:id", auth, replaceUser);
-// Update PATCH /users/:id
-Routes.patch("/users/:id", auth, updateUser);
-// Delete DELETE /users/:id
-Routes.delete("/users/:id", auth, deleteUser);
-//Create POST /users     C R U D
-Routes.post("/users", auth, createProduct);
+// // Update PUT /users/:id
+// Routes.put("/users/:id", auth, replaceUser);
+// // Update PATCH /users/:id
+// Routes.patch("/users/:id", auth, updateUser);
+// // Delete DELETE /users/:id
+// Routes.delete("/users/:id", auth, deleteUser);
+// //Create POST /users     C R U D
+// Routes.post("/users", auth, createProduct);
 
 // READ GET /products
 
