@@ -34,7 +34,7 @@ Routes.post("/users", auth, createProduct);
 
 // READ GET /products
 
-Routes.get("/products/",auth, getAllProducts);
+Routes.get("/products/", getAllProducts);
 
 // Read GET /products/:id
 Routes.get("/products/:id", auth, getProduct);
