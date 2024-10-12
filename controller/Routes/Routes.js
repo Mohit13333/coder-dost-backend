@@ -37,13 +37,13 @@ const Routes = express.Router();
 Routes.get("/products/", getAllProducts);
 
 // Read GET /products/:id
-Routes.get("/products/:id", auth, getProduct);
+Routes.get("/products/:id", getProduct);
 
 // Update PUT /products/:id
-Routes.put("/products/:id", auth, replaceProduct);
+Routes.put("/products/:id", replaceProduct);
 // Update PATCH /products/:id
-Routes.patch("/products/:id", auth, updateProduct);
+Routes.patch("/products/:id", updateProduct);
 // Delete DELETE /products/:id
-Routes.delete("/products/:id", auth, deleteProduct);
+Routes.delete("/products/:id", deleteProduct);
 
 export default Routes;
