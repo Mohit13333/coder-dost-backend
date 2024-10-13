@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-axios.defaults.baseUrl = "";
+axios.defaults.baseURL = "";
 axios.defaults.headers.common['Authorization'] = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1rMTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyODcyMTY5NH0.NZlEKeltlT3shhQgImDHGFUBIR-H_k0tOTeUyQ3s_b-O7wNzncB2oOo6gETZfr_iPuAZeh1QSp3_-Qq2lKwlhzYnrwU7Vzl7MxhH69d-XJOUIPWyI2kxtRper_V3i95H7EjghzfT3Fn6cbHbHmaeIhBf-BeNlPYyj0paN-bIXb5b1HMaxKcHc8STNzJRxIIY9CF6_3NwNE5NuaMmGXcq5JkikyQIV1JMcB6vAcNtfRZEj09JOt7VCVrIuMpAgnYQ2FDfS7ITe9rsEQENeXcaR_0BgUmg0pX7e1WH_G2XNQcvftLUhRSl2hxa5jyWq1AFO9k7nxpYaCj2kYsIEGBEmw";
 
 const AddProduct = () => {
