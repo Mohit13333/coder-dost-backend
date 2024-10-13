@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import "../event/event.js"
 import { fileURLToPath } from 'url';
 import path from 'path';
 import dotenv from 'dotenv';

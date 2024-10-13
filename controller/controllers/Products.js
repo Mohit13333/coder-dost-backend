@@ -9,9 +9,21 @@ async (req, res) => {
 };
 
 const getAllProducts = async(req, res) => {
-  const getProducts=await Product.find();
-  console.log(getProducts);
-  res.json(getProducts);
+  let query=Product.find();
+  // let sort1=req.query;
+  let sort=req.query.sort;
+  let pageSize=2;
+  let page=req.query.page;
+  if(sort){
+    const getProducts=await query.sort({[req.query.sort]:req.query.order}).skip(pageSize*(page-1)).limit(pageSize).exec();
+    res.json(getProducts);
+  }else if(page){
+    const getProducts=await query.skip(pageSize*(page-1)).limit(pageSize).exec();
+    res.json(getProducts);
+  }else{
+    const getProducts=await query.exec();
+    res.json(getProducts);
+  }
 };
 
 const getProduct = async (req, res) => {

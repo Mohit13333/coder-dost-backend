@@ -18,7 +18,7 @@ import auth from "../jwt/jwt.js";
 // import { createUser } from "../controllers/auth.js";
 const Routes = express.Router();
 
-Routes.get("/users/", auth, getAllUsers);
+Routes.get("/users/", auth,getAllUsers);
 
 // Read GET /users/:id
 Routes.get("/users/:id", auth, getUser);
@@ -30,11 +30,11 @@ Routes.patch("/users/:id", auth, updateUser);
 // Delete DELETE /users/:id
 Routes.delete("/users/:id", auth, deleteUser);
 //Create POST /users     C R U D
-Routes.post("/users", auth, createProduct);
+Routes.post("/products", auth, createProduct);
 
 // READ GET /products
 
-Routes.get("/products/", getAllProducts);
+Routes.get("/products", getAllProducts);
 
 // Read GET /products/:id
 Routes.get("/products/:id", auth, getProduct);

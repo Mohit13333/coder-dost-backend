@@ -9,7 +9,7 @@ const getAllUsers = async (req, res) => {
 
 const getUser = async (req, res) => {
   const id = req.params.id;
-  const user = await User.findById(id); // Ensure you are returning only the document
+  const user = await User.findById(id).populate('cart');; // Ensure you are returning only the document
   res.status(200).json(user);
 };
 const replaceUser = async (req, res) => {
