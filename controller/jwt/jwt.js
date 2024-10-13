@@ -4,7 +4,7 @@ import fs from "fs";
 
 
 const __dirname = path.dirname('conroller');
-const publicekey=fs.readFileSync(path.join(__dirname,"public.key"),"utf-8");
+const publicekey=fs.readFileSync(path.resolve(__dirname,"public.key"),"utf-8");
 const auth = (req, res, next) => {
   try {
     const token = req.get("authorization").split("Bearer ")[1];
