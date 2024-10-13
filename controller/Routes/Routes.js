@@ -7,27 +7,23 @@ import {
   replaceProduct,
   updateProduct,
 } from "../controllers/Products.js";
-// import {
-//   getAllUsers,
-//   getUser,
-//   replaceUser,
-//   updateUser,
-//   deleteUser,
-// } from "../controllers/user.js";
-// import auth from "../jwt/jwt.js";
-// import { createUser } from "../controllers/auth.js";
+import {
+  getAllUsers,
+  getUser,
+  replaceUser,
+  updateUser,
+  deleteUser,
+} from "../controllers/user.js";
+import auth from "../jwt/jwt.js";
+import { createUser } from "../controllers/auth.js";
 const Routes = express.Router();
 
-<<<<<<< HEAD
 Routes.get("/users/", auth,getAllUsers);
-=======
-// Routes.get("/users/", auth, getAllUsers);
->>>>>>> 03c6afcb73fdd0a283e249b9d230982ab7af047e
 
-// // Read GET /users/:id
-// Routes.get("/users/:id", auth, getUser);
 
-<<<<<<< HEAD
+// Read GET /users/:id
+Routes.get("/users/:id", auth, getUser);
+
 // Update PUT /users/:id
 Routes.put("/users/:id", auth, replaceUser);
 // Update PATCH /users/:id
@@ -36,16 +32,15 @@ Routes.patch("/users/:id", auth, updateUser);
 Routes.delete("/users/:id", auth, deleteUser);
 //Create POST /users     C R U D
 Routes.post("/products", auth, createProduct);
-=======
-// // Update PUT /users/:id
-// Routes.put("/users/:id", auth, replaceUser);
-// // Update PATCH /users/:id
-// Routes.patch("/users/:id", auth, updateUser);
-// // Delete DELETE /users/:id
-// Routes.delete("/users/:id", auth, deleteUser);
-// //Create POST /users     C R U D
-// Routes.post("/users", auth, createProduct);
->>>>>>> 03c6afcb73fdd0a283e249b9d230982ab7af047e
+// Update PUT /users/:id
+Routes.put("/users/:id", auth, replaceUser);
+// Update PATCH /users/:id
+Routes.patch("/users/:id", auth, updateUser);
+// Delete DELETE /users/:id
+Routes.delete("/users/:id", auth, deleteUser);
+//Create POST /users     C R U D
+Routes.post("/users", auth, createProduct);
+
 
 // READ GET /products
 
